@@ -10,6 +10,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
+import static org.testng.Assert.assertTrue;
 
 
 public class LocatorsTest {
@@ -33,7 +36,7 @@ public class LocatorsTest {
         //TODO 1 - locate search input field by ID and assign to a variable named elementById
         WebElement elementById = driver.findElement(By.id("search_query_top"));
 
-        Assert.assertTrue(elementById.isDisplayed());
+        assertTrue(elementById.isDisplayed());
         //TODO 1
     }
 
@@ -41,7 +44,8 @@ public class LocatorsTest {
     @Test
     public void locateElementByClassNameTest() throws Exception {
         //TODO 2 - locate *all* (also that are not visible on the screen) products by class name and put them into ArrayList Collection and check that elements list size is 14
-
+        List<WebElement> searchResultElements = driver.findElements(By.className("ajax_block_product"));
+        assertTrue(searchResultElements.size() == 14);
         //TODO 2
     }
 
