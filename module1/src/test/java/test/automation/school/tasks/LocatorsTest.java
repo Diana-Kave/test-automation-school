@@ -67,7 +67,7 @@ public class LocatorsTest {
 
     @Test
     public void locateElementByTagNameTest() throws Exception {
-        //TODO 3 - locate all images by tag name and put them into ArrayList Collection. Then check that first element in Collection is displayed
+        //TODO 3 - locate all images by tag name and put them into ArrayList Collection
 
         //TODO 3
     }
